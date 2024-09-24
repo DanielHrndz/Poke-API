@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,900;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #f5f7fa;
+    --text-color: #333;
+    --border-radius: 10px;
+    --input-padding: 0.75em;
+    --shadow: 10px 10px 6px rgba(0, 0, 0, 0.2);
+    --edit-color: #3498db;
+    --delete-color: #e74c3c;
+    --edit-color-hover: #2980b9;
+    --delete-color-hover: #c0392b;
+}
+
+body {
+    font-family: "Barlow", sans-serif;
+    background-color: var(--secondary-color);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin: 0.5em 0;
+}
+
+form {
+    background-color: white;
+    padding: 2em;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: var(--input-padding);
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #357ABD;
+}
+
+input[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--input-padding);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #357ABD;
+}
+
+.result-area {
+    margin-top: 2em;
+    width: 100%;
+    max-width: 500px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: white;
+    padding: 1em;
+    margin-bottom: 0.5em;
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+    gap: 1em;
+}
+
+li img {
+    border-radius: var(--border-radius);
+}
+
+li span {
+    font-size: 1.2em;
+    color: var(--text-color);
+    flex: 1;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    width: 90px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 0.5em;
+    border-radius: var(--border-radius);
+}
+
+button.edit {
+    background-color: var(--edit-color);
+    color: white;
+}
+
+button.delete {
+    background-color: var(--delete-color);
+    color: white;
+}
+
+button.edit:hover {
+    background-color: var(--edit-color-hover);
+}
+
+button.delete:hover {
+    background-color: var(--delete-color-hover);
+}
